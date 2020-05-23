@@ -11,7 +11,7 @@ import Routes from "./components/routing/Routes";
 
 import { loadUser } from "./actions/authActions";
 
-import "antd/dist/antd.css";
+import "antd/dist/antd.less";
 import "draft-js/dist/Draft.css";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./App.css";

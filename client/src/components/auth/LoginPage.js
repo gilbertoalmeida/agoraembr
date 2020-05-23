@@ -31,6 +31,14 @@ const LoginPage = ({ error, auth, login }) => {
     login(loginForm);
   };
 
+  const devSubmit = () => {
+    //attempt to login
+    login({
+      email: "test@gmail.com",
+      password: "123456"
+    });
+  };
+
   const layout = {
     labelCol: {
       span: 8
@@ -98,6 +106,11 @@ const LoginPage = ({ error, auth, login }) => {
       </Form.Item>
       <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
         <RegisterModal />
+      </Form.Item>
+      <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+        <Button type="dashed" onClick={devSubmit} block>
+          Entrar como test
+        </Button>
       </Form.Item>
       <div className="register-modal__body__privicy_policy">
         <Link to="/privacy-policy">Política de privacidade</Link>

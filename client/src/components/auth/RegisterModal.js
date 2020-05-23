@@ -77,8 +77,8 @@ const RegisterModal = ({
 
   return (
     <div>
-      <Button type="primary" onClick={showModal} block>
-        Registre-se
+      <Button type="default" onClick={showModal} block>
+        ou registre-se
       </Button>
 
       <Modal
