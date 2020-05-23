@@ -5,6 +5,7 @@ import {
   USER_LOADING,
   USER_LOADED,
   AUTH_ERROR,
+  LOGGINGIN,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   EDITING_PROFILE,
@@ -79,7 +80,7 @@ export const register = ({
 };
 
 // Login User
-export const login = ({ username, password }) => dispatch => {
+export const login = ({ email, password }) => async dispatch => {
   // Headers
   const config = {
     headers: {
@@ -88,24 +89,30 @@ export const login = ({ username, password }) => dispatch => {
   };
 
   //Request body
-  const body = JSON.stringify({ username, password });
+  const body = JSON.stringify({ email, password });
 
-  axios
-    .post("/api/auth", body, config)
-    .then(res =>
+  try {
+    const res = await axios.post(
+      "/api/auth",
+      body,
+      config,
       dispatch({
-        type: LOGIN_SUCCESS,
-        payload: res.data //everything, including the token to the auth reducer
+        type: LOGGINGIN
       })
-    )
-    .catch(err => {
-      dispatch(
-        returnErrors(err.response.data, err.response.status, "LOGIN_FAIL")
-      );
-      dispatch({
-        type: LOGIN_FAIL
-      });
+    );
+    dispatch(clearErrors());
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data //everything, including the token to the auth reducer
     });
+  } catch (err) {
+    dispatch(
+      returnErrors(err.response.data, err.response.status, "LOGIN_FAIL")
+    );
+    dispatch({
+      type: LOGIN_FAIL
+    });
+  }
 };
 
 //Edit User Profile

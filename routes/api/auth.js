@@ -61,38 +61,47 @@ router.post("/register", async (req, res) => {
 // @route   POST api/auth
 // @desc    Authenticate the user
 // @access  Public
-router.post("/", (req, res) => {
-  const { username, password } = req.body;
+router.post("/", async (req, res) => {
+  const { email, password } = req.body;
 
   //Simple validation
-  if (!username || !password) {
+  if (!email || !password) {
     return res.status(400).json({ msg: "missing_credentials" }); //this is now not the error message itself, but part of the id of the translation
   }
 
-  //Check for existing user
-  User.findOne({ username: username }).then(loggedUser => {
-    if (!loggedUser) return res.status(400).json({ msg: "wrong_credentials" }); //this is now not the error message itself, but part of the id of the translation
+  try {
+    //checking if email exists
+    const existingUser = await User.findOne({ email });
+    if (!existingUser) {
+      return res.status(400).json({ msg: "wrong_credentials" });
+    }
 
     //Validade the password
-    bcrypt.compare(password, loggedUser.password).then(isMatch => {
-      if (!isMatch) return res.status(400).json({ msg: "wrong_credentials" });
+    const isMatch = await bcrypt.compare(password, existingUser.password);
+    if (!isMatch) {
+      return res.status(400).json({ msg: "wrong_credentials" });
+    }
 
-      jwt.sign(
-        { _id: loggedUser._id }, // payload. I am sending the user id to verify actions later
-        config.get("jwtSecret"),
-        { expiresIn: 360000 },
-        (err, token) => {
-          if (err) throw err;
-          res.json({
-            token: token,
-            _id: loggedUser._id,
-            username: loggedUser.username,
-            profile_pictures: loggedUser.profile_pictures
-          });
-        }
-      );
+    jwt.sign(
+      { _id: existingUser._id }, // payload. I am sending the user id to verify actions later
+      config.get("jwtSecret"),
+      { expiresIn: 360000 },
+      (err, token) => {
+        if (err) throw err;
+        res.json({
+          token: token,
+          _id: existingUser._id,
+          completeName: existingUser.completeName,
+          email: existingUser.email
+        });
+      }
+    );
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({
+      msg: "server_error"
     });
-  });
+  }
 });
 
 // @route   GET api/auth/user

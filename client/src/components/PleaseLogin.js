@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { withLocalize, Translate } from "react-localize-redux";
-import LoginForm from "./auth/LoginForm";
 import { Link } from "react-router-dom";
+import LoginPage from "./auth/LoginPage";
 
 const PleaseLogin = () => {
   window.scrollTo(0, 0);
@@ -16,7 +16,7 @@ const PleaseLogin = () => {
         <div className="please-login-body">
           <Translate id="general.please_login_text" />
           <div className="please-login__login-form">
-            <LoginForm />
+            <LoginPage />
           </div>
           <div className="please-login__register-call-to-action">
             <div className="please-login__privicy_policy">

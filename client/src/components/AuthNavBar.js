@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Logout from "./auth/Logout";
 
 class AuthNavBar extends Component {
   render() {
@@ -11,6 +12,7 @@ class AuthNavBar extends Component {
               <Link to="/">
                 <button>Página Principal</button>
               </Link>
+              <Logout />
             </div>
           </div>
         </div>

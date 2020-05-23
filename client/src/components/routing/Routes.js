@@ -8,7 +8,7 @@ import EditProfile from "../auth/EditProfile";
 import NotFound from "../NotFound";
 import About from "../About";
 import PrivacyPolicy from "../PrivacyPolicy";
-import RegisterPage from "../auth/RegisterPage";
+import LoginPage from "../auth/LoginPage";
 
 const Routes = () => {
   return (
@@ -23,7 +23,7 @@ const Routes = () => {
         <Route exact path="/articles/:id" component={ArticlePage} />
         <Route exact path="/users/edit-profile" component={EditProfile} />
         <Route exact path="/users/:username" component={UserPage} />
-        <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/conectar" component={LoginPage} />
         <Route exact path="/about" component={About} />
         <Route exact path="/privacy-policy" component={PrivacyPolicy} />
         <Route component={NotFound} />

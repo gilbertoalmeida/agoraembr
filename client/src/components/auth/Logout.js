@@ -5,8 +5,6 @@ import { connect } from "react-redux";
 import { logout } from "../../actions/authActions";
 import PropTypes from "prop-types";
 
-import { withLocalize, Translate } from "react-localize-redux";
-
 class Logout extends Component {
   static propTypes = {
     logout: PropTypes.func.isRequired
@@ -17,12 +15,6 @@ class Logout extends Component {
     this.props.logout();
   };
 
-  componentDidMount() {
-    if (this.props.isOpen) {
-      this.props.toggle();
-    }
-  }
-
   render() {
     return (
       <Fragment>
@@ -30,16 +22,14 @@ class Logout extends Component {
           className="button-form-top logout"
           onClick={this.logoutProcedure}
         >
-          <Translate id="authnavbar.logoutbutton" />
+          Sair
         </Button>
       </Fragment>
     );
   }
 }
 
-export default withLocalize(
-  connect(
-    null,
-    { logout }
-  )(withRouter(Logout))
-);
+export default connect(
+  null,
+  { logout }
+)(withRouter(Logout));
