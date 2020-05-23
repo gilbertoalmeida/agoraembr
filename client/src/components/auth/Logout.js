@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button } from "antd";
 import { connect } from "react-redux";
 import { logout } from "../../actions/authActions";
 import PropTypes from "prop-types";
@@ -19,6 +19,7 @@ class Logout extends Component {
     return (
       <Fragment>
         <Button
+          type="ghost"
           className="button-form-top logout"
           onClick={this.logoutProcedure}
         >

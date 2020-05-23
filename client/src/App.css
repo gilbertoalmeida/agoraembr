@@ -36,12 +36,80 @@ body {
   color: #031926;
 }
 
+header {
+  /* empty space for the fixed AuthNavBar */
+  margin-top: 60px;
+}
+
+header h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+@media (max-width: 730px) {
+  /* picked this size, so that iphones plus and X would still have the big size while landscape */
+  header h1 {
+    font-size: 8vw;
+  }
+}
+
+/* AuthNavBar */
+
+.authnavbar-top-fixer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff7f070;
+  z-index: 1000;
+}
+
+.authnavbar-main-box-element {
+  margin: auto;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authnavbar__main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 9px 0;
+}
+
+@media (max-width: 1080px) {
+  .authnavbar-main-box-element {
+    max-width: 90vw;
+  }
+}
+
+.authnavbar__favi-brand-wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 26px;
+  align-items: flex-end;
+}
+
+.authnavbar__favi-brand-wrapper a div {
+  line-height: 0.8;
+}
+
 /* Footer */
 
 .footer-container {
   position: relative;
-  background-color: #031926f8;
+  background-color: #3b413cf8;
   height: 350px;
   margin-top: 100px;
+  color: #e3b23c;
+}
+
+.footer-container a {
   color: #e3b23c;
 }

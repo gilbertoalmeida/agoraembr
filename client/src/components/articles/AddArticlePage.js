@@ -15,11 +15,7 @@ import {
   resizeTitleTextarea,
   addErrorSrc
 } from "../../Utils/Utils";
-import {
-  withLocalize,
-  Translate,
-  getActiveLanguage
-} from "react-localize-redux";
+import { withLocalize, Translate } from "react-localize-redux";
 import PleaseLogin from "../PleaseLogin";
 import LoadingArticlePage from "./LoadingArticlePage";
 
@@ -299,8 +295,7 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
   error: state.error,
   auth: state.auth,
-  article: state.article,
-  chosenLanguage: getActiveLanguage(state.localize).code
+  article: state.article
 });
 
 export default withLocalize(

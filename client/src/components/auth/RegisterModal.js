@@ -83,7 +83,7 @@ const RegisterModal = ({
 
       <Modal
         visible={visible}
-        title="Register Modal"
+        title="Formulário de registro"
         onOk={() => {
           form
             .validateFields()
@@ -102,7 +102,6 @@ const RegisterModal = ({
             ? "Tentar de novo"
             : "Enviar"
         }
-        cancelText="cancelar"
       >
         <Form
           {...layout}
