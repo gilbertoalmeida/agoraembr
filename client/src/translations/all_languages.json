@@ -1,0 +1,258 @@
+{
+  "general": {
+    "back_to_homepage": ["Back to homepage", "Voltar pra página inicial"],
+    "privacy_policy": ["Privacy policy", "Política de privacidade"],
+    "please_login": ["Got a profile?", "Cê tem um perfil?"],
+    "please_login_text": [
+      "Use the form below to login or to sign up",
+      "Use o formulário abaixo pra entrar ou se registrar"
+    ],
+    "not_found": ["Nothing here 🤷🏽", "Nada aqui 🤷🏽"],
+    "not_found_text": [
+      "This page doesn't exist.<br>You will have to hunt somewhere else..",
+      "Essa página não existe.<br>Você vai ter que caçar em outro lugar.."
+    ]
+  },
+  "header": {
+    "call1": ["Cacuras in the making", "Cacuras em formação"],
+    "call2": ["Follow this metamorphosis", "Acompanhe essa metamorfose"],
+    "still_working": [
+      "I'm still working on the design of this page. Chill out",
+      "Ainda não terminei o design dessa página. Relaxe"
+    ]
+  },
+  "authnavbar": {
+    "greeting": ["Hi,", "Oi,"],
+    "postarticlebutton": ["Post an article", "Postar um artigo"],
+    "logoutbutton": ["Log out", "Sair"],
+    "loginbutton": ["Log in", "Entrar"],
+    "register_button": ["Sign up", "Registre-se"],
+    "username_placeholder": ["cacura name", "nome de cacura"],
+    "password_placeholder": ["password", "senha"],
+    "lang_icon": ["/Assets/uk_flag.png", "/Assets/brazil_flag.png"]
+  },
+  "registermodal": {
+    "header": [
+      "Tell us who you wanna be:",
+      "Conta pra nós quem você quer ser:"
+    ],
+    "already_registered_msg": [
+      "Already have an account? Log in through the top menu",
+      "Já tem um perfil? Entre pelo menu superior"
+    ],
+    "name": ["Name", "Nome"],
+    "email": ["Email", "Email"],
+    "username": ["Cacura Name", "Nome de Cacura"],
+    "password": ["Password", "Senha"],
+    "name_placeholder": [
+      "Your real, official, like-to-be-called name :)",
+      "Seu nome real, oficial, social :)"
+    ],
+    "email_placeholder": [
+      "We won't send you anything you don't ask for",
+      "Não mandaremos nada que você não peça"
+    ],
+    "username_placeholder": [
+      "Just how you will be called around here",
+      "Como você será chamado por aqui"
+    ],
+    "password_placeholder": [
+      "Between 6 - 50 characters",
+      "Entre 6 - 50 caracteres"
+    ],
+    "username-wrong-msg": [
+      "keep it among letters, numbers, . or _",
+      "use apenas letras, números, . ou _"
+    ],
+    "username-empty-msg": ["choose a cacura name", "escolha um nome de cacura"],
+    "password-min-msg": ["at least 6 characters", "pelo menos 6 caracteres"],
+    "username-max-msg": ["max. 30 characters", "máx. 30 caracteres"],
+    "password-max-msg": ["max. 50 characters", "máx. 50 caracteres"],
+    "submit_button": ["Done", "Pronto"],
+    "try_again_button": ["Try again", "Tentar de novo"],
+    "registering_button": ["processing...", "processando..."]
+  },
+  "article": {
+    "by": ["by", "por"],
+    "edited_on": ["edited on", "editado em"],
+    "post": ["Post", "Postar"],
+    "posting": ["Posting...", "Postando..."],
+    "posting_failed": [
+      "Posting failed. Try again?",
+      "Postagem falhou. Tentar de novo?"
+    ],
+    "posting_success": ["Posted !", "Postado !"],
+    "loading": ["Loading...", "Carregando..."],
+    "article_not_found": ["Article not found", "Artigo não encontrado"],
+    "article_not_found_text": [
+      "Wrong link or this article was deleted.<br>You missed out :/",
+      "Link errado ou esse artigo foi apagado<br>Cê ficou de fora :/"
+    ]
+  },
+  "comments_section": {
+    "header": ["Comments", "Comentários"],
+    "loading": ["Loading comments...", "Carregando comentários..."],
+    "no_comments": [
+      "This article has no comments yet.<br>Be the first!",
+      "Esse artigo não tem nenhum comentário ainda.<br>Seja o primeiro!"
+    ],
+    "show_replies": ["Show replies", "mostrar respostas"],
+    "reply": ["Reply", "Responder"],
+    "no_auth_no_comment": [
+      "xx- Login to comment -xx",
+      "xx- Faça login pra commentar -xx"
+    ],
+    "no_auth_no_reply": [
+      "xx- Login to reply -xx",
+      "xx- Faça login pra responder -xx"
+    ],
+    "input": [
+      "Try not to be the jerk of the comment section",
+      "Tente não ser o babaca dos comentários"
+    ],
+    "submit_button": ["Post", "Postar"],
+    "posting": ["Posting...", "Postando..."],
+    "posting_failed": [
+      "Commenting failed. Try again?",
+      "Comentário falhou. Tentar de novo?"
+    ]
+  },
+  "add_article_page": {
+    "title": ["Title...", "Título..."],
+    "body": [
+      "Tell us how is being a cacura for you...",
+      "Conta pra nós como é ser uma cacura pra você..."
+    ],
+    "language": ["en", "pt"]
+  },
+  "footer": {
+    "search_call_to_action": ["Find an article:", "Ache um artigo:"],
+    "search_input_placeholder": ["use keywords", "use palavras-chave"],
+    "search_button": ["Search", "Procurar"],
+    "sign_up_question": [
+      "Still don't have an account?",
+      "Ainda não tem um perfil?"
+    ],
+    "privacy_policy": ["Privacy", "Privacidade"],
+    "privacy_policy_text": [
+      "We are, of course, committed to respecting your privacy!!<br><br>The information required to register a new profile is the minimum necessary for the creation of a user and will not be attached to any of your personal data in any way.<br><br>The only publicly available information from the registration form is your <i>cacura name</i>, which is used to identify your profile in the site. Your password is protected using a <i>hashing</i> function and cannot be visible by ANYONE.<br><br>Further information added to your profile, like pictures and articles, are public and visible to all visitors of the website. It is your choice how much to share.<br><br>If you want your data to be completely deleted from our database, please contact us.<br><br>We will NEVER share or sell ANY of this info ;)<br>How dare we!",
+      "Nós estamos, evidentemente, preocupados com a sua privacidade!!<br><br>As informações necessárias para registrar um novo perfil são as mínimas para a criação de um usuário e não serão relacionadas a nenhum dado pessoal seu de nenhuma maneira.<br><br>A única informação publicamente disponível do formulário de registro é o <i>nome de cacura</i>, que é usado para identificar o seu perfil pelo site. A sua senha é protegida usando uma função do tipo <i>hash</i> e não é visível para NINGUÉM.<br><br>Outras informações adicionadas ao seu perfil, como fotos e artigos, são públicas e visíveis para todos os visitantes do site. É de sua escolha o quanto compartilhar.<br><br>Se você desejar que seus dados sejam completamente deletados de nossa base de dados, por favor nos contate.<br><br>Nós NUNCA distribuiremos nem venderemos NENHUMA informação sua ;)<br>Como ousaríamos!"
+    ],
+    "about": ["About", "Sobre"],
+    "about_text": [
+      "CACURADURA started as a personal blog of a homossexual that noticed he was becoming old. <br> <br> But later he realized he didn't want to create content all the time and that the topic was too big for his own experiences alone. <br> <br> so he decided to transform it in a social network, where people can share their experiences about growing old as LGBTQ+",
+      "CACURADURA começou como um blog pessoal de um gay que notou que ele estava ficando velho. <br> <br> Mas depois ele percebeu que não queria criar conteúdo todo o tempo e que o tópico era muito grande para suas experiências pessoais sozinhas. <br> <br> Então ele decidiu transformá-lo em uma rede social, onde as pessoas podem compartilhar suas experiências sobre envelhecer enquanto LGBTQ+"
+    ]
+  },
+  "choose_cover_pic_modal": {
+    "add_cover_img": ["cover image", "imagem de capa"],
+    "header": ["Paste the URL of a picture", "Coloque o URL de uma foto"],
+    "proportion": [
+      "The cover will have width = 2x height *",
+      "A capa terá largura = 2x altura *"
+    ],
+    "add_img": ["Add image", "Adicionar imagem"],
+    "asterisk": [
+      "* The image will fill this space maintaining proportions",
+      "* A image preencherá esse espaço mantendo as proporções"
+    ]
+  },
+  "user_page": {
+    "owner_phrase": [
+      "This is ${owner}'s profile",
+      "Esse é o perfil de ${owner}"
+    ],
+    "articles": ["Articles", "Artigos"],
+    "pictures": ["Pictures", "Fotos"],
+    "no_articles": [
+      "This cacura has not posted any articles yet",
+      "Essa cacura ainda não postou nenhum artigo"
+    ],
+    "article_design": [
+      "Still gonna make this look nice. I am just throwing the user articles here for now",
+      "Ainda vou fazer isso aqui ficar bonito. Por agora, só tô jogando os artigos da cacura aqui"
+    ],
+    "edit_profile": ["Edit profile", "Editar perfil"],
+    "user_not_found": ["Cacura not found", "Cacura não encontrada"],
+    "user_not_found_text": [
+      "Wrong link or the profile of this cacura was deleted.<br>You'll have to hunt somewhere else :/",
+      "Link errado ou o perfil dessa cacura foi apagado<br>Cê vai ter que caçar em outro lugar :/"
+    ]
+  },
+  "edit_profile": {
+    "title": ["Edit your profile", "Edite seu perfil"],
+    "username": ["Cacura Name", "Nome de Cacura"],
+    "username_placeholder": [
+      "How you are known around here",
+      "Como você é conhecido por aqui"
+    ],
+    "profile_pictures": ["Profile pictures", "Fotos de perfil"],
+    "add_pic_placeholder": ["Link to a new picture", "Link de uma nova foto"],
+    "add_picture": ["Add", "Adicionar"],
+    "submit_button": ["Save changes", "Salvar"],
+    "editing_button": ["Saving...", "Salvando..."],
+    "try_again_button": ["Try again", "Tentar de novo"]
+  },
+  "error_messages": {
+    "server_error": [
+      "Server error. Pls try again later<br>💀💀💀",
+      "Erro no servidor. Por favor tente de novo<br>💀💀💀"
+    ],
+    "missing_credentials": [
+      "You have to fill in both fields ;)",
+      "Prencha os dois campos ;)"
+    ],
+    "wrong_credentials": [
+      "Uh, that's a wrong cacura name or password",
+      "Ops, você errou o nome de cacura ou a senha"
+    ],
+    "missing_register_fields": [
+      "Please fill in all the fields",
+      "Preencha todos os campos, por favor"
+    ],
+    "existing_email": [
+      "This email belongs to one of our cacuras already. Pls enter a new one",
+      "Esse email já é de uma cacura nossa. Por favor, escolha outro"
+    ],
+    "existing_username": [
+      "This cacura name is already used around here. Pls choose another one",
+      "Esse nome de cacura já está rodando por aqui. Por favor, escolha outro"
+    ],
+    "missing_title_text": [
+      "The article needs a title and a text",
+      "O artigo precisa de um título e um texto"
+    ],
+    "max_characters": [
+      "You reached the maximum number of characters in an article. Chill",
+      "Você atingiu o limite de characteres de um artigo. Relaxe"
+    ],
+    "max_characters_posted": [
+      "The text you want to post exceeds the maximum number of characters in an article. Chill",
+      "O texto que você quer copiar excede o limite de characteres de um artigo. Relaxe"
+    ],
+    "missing_comment": [
+      "An empty comment won't do ;)",
+      "Um comentário vazio não vai rolar ;)"
+    ],
+    "whitespaces_username": [
+      "Choose a cacura name wihtout white spaces",
+      "Escolha um nome de cacura sem espaços"
+    ],
+    "big_username": [
+      "The cacura name shouldn't have more than 30 characters",
+      "O nome de cacura não deve ter mais que 30 caracteres"
+    ],
+    "small_password": [
+      "The password should have at least 6 characters",
+      "A senha deve ter pelo menos 6 caracteres"
+    ],
+    "big_password": [
+      "The cacura name shouldn't have more than 30 characters",
+      "O nome de cacura não deve ter mais que 30 caracteres"
+    ],
+    "missing_username": [
+      "Please choose a cacura name",
+      "Escolha um nome de cacura"
+    ]
+  }
+}

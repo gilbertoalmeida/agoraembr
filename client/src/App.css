@@ -1,0 +1,47 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/* 
+Hex background strong red: #c42f15
+Hex lighter red: #f02d0a
+User links are light and become stronger with hover
+
+Hex light pink from DURA : #faa9cb
+Hex stronger pink: #e69696
+User links are stronger and become light with hover
+
+Hex preto : #05050a
+
+Hex : #9b2d0f
+Hex : #780f05
+Hex : #3c0505
+
+*/
+
+header,
+footer,
+nav,
+article,
+main {
+  display: block;
+  font-family: "Crete Round", serif;
+}
+
+body {
+  background-color: #e3b23c;
+  background-color: #031926;
+  background-color: #3b413c;
+  background-color: #005154;
+  background-color: #fff7f0;
+  font-family: "Crete Round", serif;
+  color: #031926;
+}
+
+/* Footer */
+
+.footer-container {
+  position: relative;
+  background-color: #031926f8;
+  height: 350px;
+  margin-top: 100px;
+  color: #e3b23c;
+}
