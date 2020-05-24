@@ -19,6 +19,10 @@ let journalSchema = mongoose.Schema({
   publisher: {
     type: String
   },
+  topicID: {
+    type: String,
+    required: true
+  },
   issn: {
     print: {
       type: String

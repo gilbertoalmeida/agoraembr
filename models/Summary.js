@@ -9,6 +9,10 @@ let summarySchema = mongoose.Schema({
     type: String,
     required: true
   },
+  topicID: {
+    type: String,
+    required: true
+  },
   posted: {
     type: Date,
     default: Date.now

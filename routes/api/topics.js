@@ -2,22 +2,21 @@ const express = require("express");
 const router = express.Router();
 
 //Bringing Model
-const Summary = require("../../models/Summary");
+const Topic = require("../../models/Topic");
 
-// @route   GET api/summaries/:id
-// @desc    Get one summary by its id
+// @route   GET api/topics/:id
+// @desc    Get one topic by its id
 // @access  Public
 router.get("/:id", async (req, res) => {
   try {
-    const summary = await Summary.findById(req.params.id);
+    const topic = await Topic.findById(req.params.id);
 
-    if (!summary) {
+    if (!topic) {
       return res.status(404);
     }
 
-    res.json(summary);
+    res.json(topic);
   } catch (err) {
-    console.log(err);
     res.status(500).send("Server Error");
   }
 });
