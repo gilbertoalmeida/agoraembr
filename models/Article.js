@@ -5,41 +5,29 @@ let articleSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
+  publishedDate: {
     type: Date,
-    required: true,
-    default: Date.now
+    required: true
   },
-  editDate: {
-    type: Date,
-    required: false
-  },
-  author: {
-    username: {
-      type: String,
-      required: true
-    },
-    _id: {
-      type: String,
-      required: true
-    }
-  },
-  coverImg: {
-    type: String,
-    required: false
-  },
-  language: {
+  authors: {
     type: String,
     required: true
   },
-  body: {
+  doi: {
+    type: String,
+    required: true
+  },
+  linkPublication: {
     type: Object,
     required: true
   },
-  homepage: {
-    type: Boolean,
-    default: false
+  journalID: {
+    type: Object,
+    required: true
   }
 });
 
 let Article = (module.exports = mongoose.model("Article", articleSchema));
+/* The first argument is the singular name of the collection your model is for. 
+** Mongoose automatically looks for the plural, lowercased version of your model name. ** 
+Thus, for the example above, the model Article is for the articles collection in the database. */

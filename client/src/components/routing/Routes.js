@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ArticlePage from "../articles/ArticlePage";
+import SummaryPage from "../summaries/SummaryPage";
 import AddArticlePage from "../articles/AddArticlePage";
 import EditArticlePage from "../articles/EditArticlePage";
 import UserPage from "../users/UserPage";
@@ -21,6 +22,7 @@ const Routes = () => {
           component={EditArticlePage}
         />
         <Route exact path="/articles/:id" component={ArticlePage} />
+        <Route exact path="/resumos/:id" component={SummaryPage} />
         <Route exact path="/users/edit-profile" component={EditProfile} />
         <Route exact path="/users/:username" component={UserPage} />
         <Route exact path="/conectar" component={LoginPage} />

@@ -19,10 +19,14 @@ let userSchema = mongoose.Schema({
     required: true
   },
   cvSummary: {
-    type: String,
-    default: "",
-    required: false
+    type: String
+  },
+  profilePic: {
+    type: String
   }
 });
 
 let User = (module.exports = mongoose.model("User", userSchema));
+/* The first argument is the singular name of the collection your model is for. 
+** Mongoose automatically looks for the plural, lowercased version of your model name. ** 
+Thus, for the example above, the model User is for the users collection in the database. */

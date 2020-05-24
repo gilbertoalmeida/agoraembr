@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import articleReducer from "./articleReducer";
+import summaryReducer from "./summaryReducer";
 import errorReducer from "./errorReducer";
 import authReducer from "./authReducer";
 import userReducer from "./userReducer";
@@ -9,6 +10,7 @@ import { localizeReducer } from "react-localize-redux";
 export default combineReducers({
   localize: localizeReducer,
   article: articleReducer,
+  summary: summaryReducer,
   comment: commentReducer,
   error: errorReducer,
   auth: authReducer,
