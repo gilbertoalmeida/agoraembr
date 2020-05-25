@@ -1,18 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { getSummary } from "../../actions/summaryActions";
 import PropTypes from "prop-types";
 import ReactHtmlParser from "react-html-parser";
 
 import LoadingArticlePage from "../articles/LoadingArticlePage";
 import ArticleNotFound from "../articles/ArticleNotFound";
+
 import { getTopic } from "../../actions/topicActions";
+import { getArticle } from "../../actions/articleActions";
+import { getSummary } from "../../actions/summaryActions";
+import { prettyDateNoHours } from "../../Utils/Utils.js";
+
+let resizeEventListener = null;
 
 const SummaryPage = ({
   getSummary,
   getTopic,
-  summary: { summary, loading },
-  topic: { topic },
+  getArticle,
+  summary: { summary, summaryLoading },
+  topic: { topic, topicLoading },
+  article: { article, articleLoading },
   match
 }) => {
   useEffect(() => {
@@ -23,21 +30,68 @@ const SummaryPage = ({
   useEffect(() => {
     if (summary) {
       getTopic(summary.topicID);
+      getArticle(summary.articleID);
     }
-  }, [summary, getTopic]);
+  }, [summary, getTopic, getArticle]);
 
-  return loading && !summary ? (
+  /* getting the height of the content part of the heading and setting it to the height
+  of the whole heading (so that the picture in the background also scales properly)
+  There's also a resize listener to redo this if the user resizes */
+  const headingContentRef = useRef(null);
+
+  useEffect(() => {
+    if (summary && topic && article) {
+      let headingContentHeight = headingContentRef.current.offsetHeight;
+      let heading = document.getElementById("heading");
+      heading.style.height = headingContentHeight + "px";
+    }
+  }, [summary, topic, article]);
+
+  if (resizeEventListener === null) {
+    /* If I don't check for this, it adds a new event listener on every render, and it becomes an 
+    exponential problem.*/
+    resizeEventListener = window.addEventListener("resize", () => {
+      let headingContentHeight = headingContentRef.current.offsetHeight;
+      let heading = document.getElementById("heading");
+      heading.style.height = headingContentHeight + "px";
+    });
+  }
+
+  return summaryLoading ||
+    articleLoading ||
+    topicLoading ||
+    !topic ||
+    !article ? (
     <LoadingArticlePage />
-  ) : !summary || !topic ? (
+  ) : !summary ? (
     <ArticleNotFound />
   ) : (
-    <div>
-      <header>
-        <h1>Summary</h1>
-      </header>
-      <img src={topic.coverPic.url} alt="imagem de capa do assunto"></img>
-      <div>{summary.title}</div>
-      <div>{ReactHtmlParser(summary.text)}</div>
+    <div className="summary-page__main-element">
+      <div id="heading" className="page-heading summary-page__heading">
+        <img src={topic.coverPic.url} alt="imagem de capa do assunto"></img>
+        <div className="summary-page__heading__pre-content">
+          <div
+            ref={headingContentRef}
+            className="summary-page__heading__content"
+          >
+            <h1 className="summary-page__heading__content__title">
+              {summary.title}
+            </h1>
+            <div className="summary-page__heading__content__authors">
+              Autores: {article.authors}
+            </div>
+            <div className="summary-page__heading__content__date">
+              Publicado em: {prettyDateNoHours(article.publishedDate)}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="summary-page__content">
+        <div className="summary-page__content__body">
+          {ReactHtmlParser(summary.text)}
+        </div>
+        <div className="summary-page__content__sider">{article.title}</div>
+      </div>
     </div>
   );
 };
@@ -45,16 +99,19 @@ const SummaryPage = ({
 SummaryPage.propTypes = {
   getSummary: PropTypes.func.isRequired,
   getTopic: PropTypes.func.isRequired,
+  getArticle: PropTypes.func.isRequired,
   summary: PropTypes.object.isRequired,
-  topic: PropTypes.object.isRequired
+  topic: PropTypes.object.isRequired,
+  article: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   summary: state.summary,
-  topic: state.topic
+  topic: state.topic,
+  article: state.article
 });
 
 export default connect(
   mapStateToProps,
-  { getSummary, getTopic }
+  { getSummary, getTopic, getArticle }
 )(SummaryPage);

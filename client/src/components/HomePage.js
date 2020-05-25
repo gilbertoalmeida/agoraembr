@@ -5,9 +5,11 @@ const HomePage = () => {
 
   return (
     <div>
-      <header className="App-header">
-        <h1>Ciência em nossa língua.</h1>
-      </header>
+      <div className="page-heading">
+        <h1 className="page-heading__website-phrase">
+          Ciência em nossa língua.
+        </h1>
+      </div>
     </div>
   );
 };

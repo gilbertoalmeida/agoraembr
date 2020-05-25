@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   summary: null,
-  loading: false
+  summaryLoading: false
 };
 
 export default function(state = initialState, action) {
@@ -15,18 +15,18 @@ export default function(state = initialState, action) {
       return {
         ...state,
         summary: null,
-        loading: true
+        summaryLoading: true
       };
     case GET_SUMMARY_SUCCESS:
       return {
         ...state,
         summary: action.payload,
-        loading: false
+        summaryLoading: false
       };
     case GET_SUMMARY_FAIL:
       return {
         ...state,
-        loading: false
+        summaryLoading: false
       };
     default:
       return state;

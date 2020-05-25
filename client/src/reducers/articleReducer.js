@@ -19,7 +19,7 @@ import {
 const initialState = {
   articles: null,
   article: null,
-  loading: false,
+  articleLoading: false,
   posting: false,
   posting_failed: false,
   editing: false,
@@ -32,36 +32,36 @@ export default function(state = initialState, action) {
       return {
         ...state,
         articles: null,
-        loading: true
+        articleLoading: true
       };
     case GET_ARTICLES_PT_SUCCESS:
       return {
         ...state,
         articles: action.payload,
-        loading: false
+        articleLoading: false
       };
     case GET_ARTICLES_EN_SUCCESS:
       return {
         ...state,
         articles: action.payload,
-        loading: false
+        articleLoading: false
       };
     case GETTING_THE_ARTICLE:
       return {
         ...state,
         article: null,
-        loading: true
+        articleLoading: true
       };
     case GET_ARTICLE_SUCCESS:
       return {
         ...state,
         article: action.payload,
-        loading: false
+        articleLoading: false
       };
     case GET_ARTICLE_FAIL:
       return {
         ...state,
-        loading: false
+        articleLoading: false
       };
     case ADDING_THE_ARTICLE:
       return {
@@ -104,19 +104,19 @@ export default function(state = initialState, action) {
       return {
         ...state,
         articles: null,
-        loading: true
+        articleLoading: true
       };
     case GET_USER_ARTICLES_SUCCESS:
       return {
         ...state,
         articles: action.payload,
-        loading: false
+        articleLoading: false
       };
     case GET_USER_ARTICLES_FAIL:
       return {
         ...state,
         articles: null,
-        loading: false
+        articleLoading: false
       };
     default:
       return state;

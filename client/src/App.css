@@ -23,7 +23,7 @@ nav,
 article,
 main {
   display: block;
-  font-family: "Crete Round", serif;
+  font-family: "Caladea", serif;
 }
 
 body {
@@ -32,23 +32,24 @@ body {
   background-color: #3b413c;
   background-color: #005154;
   background-color: #fff7f0;
-  font-family: "Crete Round", serif;
+  font-family: "Caladea", serif;
   color: #031926;
 }
 
-header {
+.page-heading {
   /* empty space for the fixed AuthNavBar */
   margin-top: 60px;
 }
 
-header h1 {
+.page-heading__website-phrase {
   font-size: 60px;
   text-align: center;
+  font-family: "Crete Round", serif;
 }
 
 @media (max-width: 730px) {
   /* picked this size, so that iphones plus and X would still have the big size while landscape */
-  header h1 {
+  .page-heading__website-phrase {
     font-size: 8vw;
   }
 }
@@ -98,6 +99,95 @@ header h1 {
 
 .authnavbar__favi-brand-wrapper a div {
   line-height: 0.8;
+}
+
+/* SummaryPage */
+
+.summary-page__main-element {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .summary-page__main-element {
+    max-width: 95%;
+  }
+}
+
+.summary-page__heading {
+  width: 100%;
+  position: relative;
+  border-left: solid 5px #005154;
+}
+
+.summary-page__heading img {
+  object-fit: cover;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+}
+
+.summary-page__heading__pre-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-left: solid 5px #e3b23c;
+}
+
+.summary-page__heading__content {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 5px 20px;
+}
+
+.summary-page__heading__content__title {
+  font-size: 25px;
+}
+
+.summary-page__heading__content__authors {
+  font-size: 18px;
+}
+
+.summary-page__heading__content__date {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 450px) {
+  .summary-page__heading__content {
+    padding: 4px 16px;
+  }
+
+  .summary-page__heading__content__title {
+    font-size: 20px;
+  }
+
+  .summary-page__heading__content__authors {
+    font-size: 14px;
+  }
+
+  .summary-page__heading__content__date {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+}
+
+.summary-page__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.summary-page__content__body {
+  max-width: 70%;
+  min-width: 400px;
+}
+
+.summary-page__content__sider {
+  max-width: 30%;
 }
 
 /* Footer */

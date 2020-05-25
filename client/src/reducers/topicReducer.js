@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   topic: null,
-  loading: false
+  topicLoading: false
 };
 
 export default function(state = initialState, action) {
@@ -15,18 +15,18 @@ export default function(state = initialState, action) {
       return {
         ...state,
         topic: null,
-        loading: true
+        topicLoading: true
       };
     case GET_TOPIC_SUCCESS:
       return {
         ...state,
         topic: action.payload,
-        loading: false
+        topicLoading: false
       };
     case GET_TOPIC_FAIL:
       return {
         ...state,
-        loading: false
+        topicLoading: false
       };
     default:
       return state;
