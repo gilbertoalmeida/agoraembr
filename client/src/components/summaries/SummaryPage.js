@@ -5,6 +5,7 @@ import ReactHtmlParser from "react-html-parser";
 
 import LoadingArticlePage from "../articles/LoadingArticlePage";
 import ArticleNotFound from "../articles/ArticleNotFound";
+import OriginalCard from "./OriginalCard";
 
 import { getTopic } from "../../actions/topicActions";
 import { getArticle } from "../../actions/articleActions";
@@ -90,7 +91,9 @@ const SummaryPage = ({
         <div className="summary-page__content__body">
           {ReactHtmlParser(summary.text)}
         </div>
-        <div className="summary-page__content__sider">{article.title}</div>
+        <div className="summary-page__content__sider">
+          <OriginalCard article={article} topic={topic} />
+        </div>
       </div>
     </div>
   );
