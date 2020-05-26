@@ -180,6 +180,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .summary-page__content__body {
@@ -221,6 +222,111 @@ body {
 
 .original-card th {
   padding-bottom: 0;
+}
+
+.summary-page__content__body__text {
+  padding: 5px;
+}
+
+.summary-page__content__body__text p,
+.summary-page__content__body__text ul,
+.summary-page__content__body__text ol {
+  background: none;
+  text-align: justify;
+}
+
+.summary-page__content__body__text h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.summary-page__content__body__text h3 {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.summary-page__content__body__text h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary-page__content__body__text h5 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #474d55;
+}
+
+.summary-page__content__body__text h2,
+.summary-page__content__body__text h3,
+.summary-page__content__body__text h4,
+.summary-page__content__body__text h5 {
+  margin-top: 0;
+}
+
+.summary-page__content__body__text h6 {
+  color: #474d55;
+}
+
+.summary-page__content__body__text ul li,
+.summary-page__content__body__text ol li {
+  margin-left: 1em;
+}
+
+.summary-page__content__body__text ol {
+  padding-inline-start: 20px;
+}
+
+.summary-page__content__body__text ul {
+  list-style-type: disc;
+  padding-inline-start: 20px;
+}
+
+.summary-page__content__body__text ul ul {
+  list-style-type: circle;
+}
+
+.summary-page__content__body__text p a {
+  font-weight: bold;
+}
+
+.summary-page__content__body__text p a:hover {
+  text-decoration: underline;
+}
+
+.summary-page__content__body__text p br {
+  content: "A" !important;
+  display: block !important;
+  margin-bottom: 28px !important;
+}
+
+/* responsiveness of article elements */
+
+@media (max-width: 450px) {
+  /* picked this size, so that iphones plus and X would still have the big size while landscape */
+  .summary-page__content__body__text p,
+  .summary-page__content__body__text ul,
+  .summary-page__content__body__text ol {
+    font-size: 14px;
+  }
+
+  .summary-page__content__body__text h2 {
+    font-size: 20px;
+  }
+
+  .summary-page__content__body__text h3 {
+    font-size: 18px;
+  }
+
+  .summary-page__content__body__text h4 {
+    font-size: 16px;
+  }
+
+  .summary-page__content__body__text h5 {
+    font-size: 16px;
+  }
 }
 
 /* Footer */

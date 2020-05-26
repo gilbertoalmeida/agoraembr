@@ -89,7 +89,9 @@ const SummaryPage = ({
       </div>
       <div className="summary-page__content">
         <div className="summary-page__content__body">
-          {ReactHtmlParser(summary.text)}
+          <div className="summary-page__content__body__text">
+            {ReactHtmlParser(summary.text)}
+          </div>
         </div>
         <div className="summary-page__content__sider">
           <OriginalCard article={article} topic={topic} />
