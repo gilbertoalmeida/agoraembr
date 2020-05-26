@@ -29,6 +29,7 @@ app.use(express.json());
 app.use("/api/articles", require("./routes/api/articles"));
 app.use("/api/summaries", require("./routes/api/summaries"));
 app.use("/api/topics", require("./routes/api/topics"));
+app.use("/api/journals", require("./routes/api/journals"));
 app.use("/api/comments", require("./routes/api/comments"));
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/auth", require("./routes/api/auth"));

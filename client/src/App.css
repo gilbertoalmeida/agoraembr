@@ -109,7 +109,7 @@ body {
   margin: auto;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .summary-page__main-element {
     max-width: 95%;
   }
@@ -190,7 +190,7 @@ body {
 
 .summary-page__content__sider {
   width: 35%;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 0 10px;
   min-width: 250px;
 }
 
@@ -201,6 +201,7 @@ body {
 
   .summary-page__content__sider {
     width: 100%;
+    margin-top: 30px;
   }
 }
 
@@ -327,6 +328,26 @@ body {
   .summary-page__content__body__text h5 {
     font-size: 16px;
   }
+}
+
+.summary-page__content__body__summary-author-info {
+  width: 100%;
+}
+
+.summary-author-card {
+  width: 400px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 16px;
+  margin: auto;
+  padding: 15px;
+  border: solid 1px #00515423;
+  background-color: #fff7f0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.summary-author-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */

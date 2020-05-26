@@ -11,6 +11,7 @@ import { getTopic } from "../../actions/topicActions";
 import { getArticle } from "../../actions/articleActions";
 import { getSummary } from "../../actions/summaryActions";
 import { prettyDateNoHours } from "../../Utils/Utils.js";
+import SummaryAuthorCard from "./SummaryAuthorCard";
 
 let resizeEventListener = null;
 
@@ -24,7 +25,7 @@ const SummaryPage = ({
   match
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    /* window.scrollTo(0, 0); */
     getSummary(match.params.id);
   }, [getSummary, match.params.id]);
 
@@ -91,6 +92,9 @@ const SummaryPage = ({
         <div className="summary-page__content__body">
           <div className="summary-page__content__body__text">
             {ReactHtmlParser(summary.text)}
+          </div>
+          <div className="summary-page__content__body__summary-author-info">
+            <SummaryAuthorCard summary={summary} />
           </div>
         </div>
         <div className="summary-page__content__sider">
